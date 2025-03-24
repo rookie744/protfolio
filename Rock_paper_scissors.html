@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="Styles/rock_paper_scissors.css">
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <button onclick="game('ROCK')"><img class="choice-img" src="Images/rock-emoji.png"></button>
+        <button onclick="game('PAPER')"><img class="choice-img" src="Images/paper-emoji.png"></button>
+        <button onclick="game('SCISSORS')"><img class="choice-img" src="Images/scissors-emoji.png"></button>
+        <button onclick="game('RESET')" title="reset the score"><img class="choice-img" src="Images/reset.png"></button> <!-- clear the local storage value  -->
+        <h1>Score Board</h1>
+        <p id="score-board"></p>
+        <h1>History</h1>
+        <p id="score-history"></p>
+    </body>
+    <footer>
+        <script src="Script/rock_paper_scissors.js"></script>
+    </footer>
+</html>

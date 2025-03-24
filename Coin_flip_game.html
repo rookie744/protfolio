@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coin flip</title>
+    </head>
+    <body>
+        <p>Coin flip choose the side</p>
+        <button onclick="coin_flip_com_val('HEAD')">HEAD</button>
+        <button onclick="coin_flip_com_val('TAILS')">TAILS</button>
+    </body>
+    <footer>
+        <script>
+            let remaining_choice;
+            let com_choice;
+            let pass;
+            function coin_flip_com_val(val)
+            {
+                if (val === 'HEAD')
+                {
+                    remaining_choice = 'TAILS';
+                }
+                else if (val === 'TAILS')
+                {
+                    remaining_choice = 'HEAD';
+                };
+                let get_com_val = Math.random(); //return random value form 0 to 1 dividing into half 0 to 1/5 and 1/5 to 1
+                if (get_com_val >= 0 && get_com_val < 1/5)
+                {
+                    com_choice = 'TAILS';
+                }
+                else if (get_com_val >= 1/5 && get_com_val <= 1)
+                {
+                    com_choice = 'HEAD';
+                };
+                if (val === com_choice)
+                {
+                    pass = true; 
+                }
+                else if (remaining_choice === com_choice)
+                {
+                    pass = false;
+                };
+                pass ? alert(`side choosen by user ${val} ,You won the tose`) : alert(`side choosen by user ${com_choice} ,Computer won the tose`);
+            };
+        </script>
+    </footer>
+</html>
