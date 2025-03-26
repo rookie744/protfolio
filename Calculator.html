@@ -5,13 +5,38 @@
         <link rel="stylesheet" href="Styles/calculator.css">
     </head>
     <body>
-        
-        <p>CONTAINER
-            VVV
-        </p>
-        
+            <div class="calculator-result"></div>
+            <div class="calculator-btn">
+            <p> 
+                <button class="btn-grey" onclick="calculator('1')">1</button>
+                <button class="btn-grey" onclick="calculator('2')">2</button>
+                <button class="btn-grey" onclick="calculator('3')">3</button>
+                <button class="btn-orange" onclick="calculator('+')">+</button>
+            </p>
+            <p>
+                <button class="btn-grey" onclick="calculator('4')">4</button>
+                <button class="btn-grey" onclick="calculator('5')">5</button>
+                <button class="btn-grey" onclick="calculator('6')">6</button>
+                <button class="btn-orange" onclick="calculator('-')">-</button>
+            </p>
+            <p>
+                <button class="btn-grey" onclick="calculator('7')">7</button>
+                <button class="btn-grey" onclick="calculator('8')">8</button>
+                <button class="btn-grey" onclick="calculator('9')">9</button>
+                <button class="btn-orange" onclick="calculator('*')">*</button>
+            </p>
+            <p>
+                <button class="btn-grey" onclick="calculator('0')">0</button>
+                <button class="btn-grey"onclick="calculator(.)">.</button>
+                <button class="btn-grey" onclick="calculator('=')">=</button>
+                <button class="btn-orange" onclick="calculator('/')">/</button>
+            </p>
+            <p>
+                <button class="btn-grey btn-clear" onclick="calculator('AC')">AC</button>
+            </p> 
+            </div>
     </body>
     <footer>
-
+        <script src="Script/calculator.js"></script>
     </footer>
 </html>
