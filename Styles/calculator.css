@@ -1,5 +1,37 @@
-div
+body
 {
-margin-left: auto;
-margin-right: auto;
+    background-color: rgb(0, 0,0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calculator-result
+{
+    color: white;
+    font-size: 45px;
+}
+
+.calculator-btn > p > button
+{
+    
+    border: none;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    margin-right: 5px;
+    border-radius: 60px;
+    cursor: pointer;
+
+}
+.btn-grey
+{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+.btn-orange
+{
+    background-color: rgb(254, 160, 10);
+    color: white;
+}
+.btn-clear
+{
+    font-size: 17px !important;
 }
