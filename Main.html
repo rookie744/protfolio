@@ -73,7 +73,10 @@
         <button id="btn_1" class="btn-uber" onclick="btn_click(this);btn_unclick('btn_2','btn_3');">One</button>
         <button id="btn_2" class="btn-uber" onclick="btn_click(this);btn_unclick('btn_1','btn_3');">Two</button>
         <button id="btn_3" class="btn-uber" onclick="btn_click(this);btn_unclick('btn_1','btn_2');">Three</button>
-        <input id="task_input" placeholder="enter the task here..." type="text"><button id="btn_task_input">Add</button>
+        <div>
+            <input id="task_input" placeholder="enter the task here..." type="text"><button id="btn_task_input">Add</button>
+            <div id="capture_task"></div>
+        </div>
     </body>
     <footer>
         <script>
@@ -280,8 +283,14 @@
            if (document.getElementById(btn_2).classList.contains('clicked-btn-uber'))
            document.getElementById(btn_2).classList.remove('clicked-btn-uber');
         // console.log(btn_1);
-        // console.log(btn_2);
-            
+        // console.log(btn_2);   
+        }
+        let Myarray = [];
+        function add_value_arr()
+        {
+           let get_task = document.getElementById('task_input').value;
+            Myarry.push(get_task);
+            console.log(Myarray);
         }
         </script>
     </footer>
