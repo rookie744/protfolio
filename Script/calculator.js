@@ -13,6 +13,7 @@ function calculator(val)
     else 
     {
         cal_string += val;
+        console.log(cal_string);
     }
     document.querySelector('.calculator-result').innerHTML = cal_string;
     localStorage.setItem('cal_history',cal_string);
