@@ -286,12 +286,134 @@
         // console.log(btn_2);   
         }
         let Myarray = [];
+        let task_list = '';
+        let return_val = '';
         function add_value_arr()
         {
            let get_task = document.getElementById('task_input').value;
-            Myarry.push(get_task);
-            console.log(Myarray);
+           document.getElementById('task_input').value = '';
+           Myarray.push(get_task);
+           for (let i = 0 ; i < Myarray.length;i++)
+           {
+                task_list = `<p>${Myarray[i]}</p>`; 
+           }
+           return_val += task_list;
+           document.getElementById('capture_task').innerHTML = return_val;
+        //    console.log(task_list);
         }
+        for (let i = 5;i >= 0 ;i--)
+        {
+            console.log(i);
+        }
+        let i = 5;
+        while (i >= 0)
+        {
+            console.log(i);
+            i-=1;
+        }
+        let my_arr_1 = [1,2,3];
+        let my_arr_2 = [];
+        let my_arr_3 = [];
+        for (let i=0;i < my_arr_1.length;i++)
+        {
+            my_arr_2.push(my_arr_1[i] * 2);
+        }
+        console.log(my_arr_2);
+        for (let i=0;i < my_arr_1.length;i++)
+        {
+            my_arr_3.push(my_arr_1[i] + 1);
+        }
+        console.log(my_arr_3);
+
+        function add_arr(my_arr,num)
+        {
+            let my_arr_1 = [];
+            for (let i=0;i < my_arr.length;i++)
+            {
+                my_arr_1.push(my_arr[i] + num);
+            }
+            console.log('Function : '+my_arr_1);
+        };
+
+        function add_two_arr(arr_1,arr_2)
+        {
+            let result_arr=[];
+            if (arr_1.length === arr_2.length)
+            {
+                for (i=0;i<arr_1.length;i++)
+                {
+                    result_arr.push(arr_1[i] + arr_2[i]);
+                }
+            }
+            else
+            {
+                result_arr.push('array length not match');
+            }
+            return result_arr;
+        };
+        function findPositiveNum(arr_1)
+        {
+            let my_arr_1 = [];
+            for (let i=0;i < arr_1.length;i++)
+            {
+                if (arr_1[i] > 0)
+                {
+                    my_arr_1.push(arr_1[i]);
+                };
+            };
+            console.log(my_arr_1.length);
+        };
+
+        function find_min_max(arr)
+        {   
+            let min = arr[0];
+            let max = arr[0];
+            let obj = {};
+            for (let i=0 ; i<arr.length ;i++)
+            {
+                
+            {
+                if(min > arr[i])
+                    min = arr[i];
+                if(max < arr[i])
+                    max = arr[i];
+            }
+            }
+            obj.max = max || null;
+            obj.min = min || null;
+            return obj;
+        }
+        function countWords(words) //['apple','orange','apple','pineapple']
+        {
+            let obj={};
+            let count = 0;
+            for (let i=0;i<words.length;i++)
+            {   
+            let take_word = words[i];
+                if (!obj[take_word])
+                {
+                    for (let j=0 ; j <words.length ;j++)
+                    {
+                       if (take_word === words[j])
+                       {
+
+                        count += 1;
+                       };
+                    };
+                    obj[take_word] = count;
+                    count = 0;
+                };
+            };
+            return obj;
+        }
+        function FindTheString(arr,string){
+            for (let i=0;i<arr.length;i++){
+                if(arr[i] === string){
+                    return i;
+                };
+            };
+            return -1;
+        };
         </script>
     </footer>
 </html>
