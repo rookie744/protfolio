@@ -1,4 +1,4 @@
-code to - push code to git  
+command to - push code to git  
 •	*** git clone 'URL' *** for the first time use  
 •	git add .  
 •	git config --global user.email "kaliyappankishore9894@gmail.com" ---if asked for it  
