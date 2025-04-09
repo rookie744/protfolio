@@ -1,1 +1,5 @@
-
+.to-do-list
+{
+  display: grid;
+  grid-template-columns: 173px 128px 100px;
+}
