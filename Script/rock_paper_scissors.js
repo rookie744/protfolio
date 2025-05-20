@@ -106,3 +106,58 @@
                 // console.log(score);
                 document.getElementById('score-history').innerHTML = `Won : ${score.won},Lose : ${score.lose},Tie : ${score.tie}`;
             }
+let clear_interval = false;
+let automate_interval = '';
+const automate_btn= document.getElementById('AUTOMATE');
+automate_btn.addEventListener('click',() =>
+{
+     
+    if (!clear_interval)
+    {
+        automate_interval = 
+        setInterval( () =>
+        {
+            system_choice = Math.random();
+            let sys_option = '';
+            if (system_choice >= 0 && system_choice < 1/3)
+            {
+                sys_option = 'PAPER';
+            }
+            else if (system_choice >= 1/3 && system_choice < 2/3)
+            {
+                sys_option = 'ROCK';
+            }
+            else if (system_choice >= 2/3 && system_choice <= 1)
+            {
+                sys_option = 'SCISSORS';
+            };
+            game(sys_option);
+        },
+        1000
+        );
+        clear_interval = true;
+    }
+    else if (clear_interval)
+        {
+            clearInterval(automate_interval);
+            clear_interval = false;
+        };
+
+});
+
+document.body.addEventListener('keydown',event => 
+{
+    if (event.key === 'r')
+    {
+        game('ROCK');
+    }
+    else if (event.key === 'p')
+    {
+        game('PAPER');
+    }
+    else if (event.key === 's')
+    {
+        game('SCISSORS');
+    };
+}
+);

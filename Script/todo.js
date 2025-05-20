@@ -36,3 +36,5 @@ function Delete()
     get_html = '';
     localStorage.setItem('to_do_list',JSON.stringify(final_arr));
 }
+const add_btn = document.getElementById('add_btn');
+add_btn.addEventListener('click',get_todo_list);
