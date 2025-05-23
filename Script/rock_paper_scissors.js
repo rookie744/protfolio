@@ -158,6 +158,43 @@ document.body.addEventListener('keydown',event =>
     else if (event.key === 's')
     {
         game('SCISSORS');
+    }
+    else if (event.key === 'a')
+    {
+        if (!clear_interval)
+    {
+        automate_interval = 
+        setInterval( () =>
+        {
+            system_choice = Math.random();
+            let sys_option = '';
+            if (system_choice >= 0 && system_choice < 1/3)
+            {
+                sys_option = 'PAPER';
+            }
+            else if (system_choice >= 1/3 && system_choice < 2/3)
+            {
+                sys_option = 'ROCK';
+            }
+            else if (system_choice >= 2/3 && system_choice <= 1)
+            {
+                sys_option = 'SCISSORS';
+            };
+            game(sys_option);
+        },
+        1000
+        );
+        clear_interval = true;
+    }
+    else if (clear_interval)
+        {
+            clearInterval(automate_interval);
+            clear_interval = false;
+        };
+    }
+    else if(event.key === 'Backspace')
+    {
+        game('RESET');
     };
 }
 );
